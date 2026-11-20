@@ -4,8 +4,22 @@ Exemplo em C# de como trocar de provedor de IA sem reescrever o código. O servi
 
 ![Trocar de provedor de IA sem reescrever o código](drafts/EXEMPLO_ia-x-csharp-trocar-provedor.svg?v=2)
 
-O repositório também contém o gerador de rascunhos de posts (`LinkedinDicas.csproj`), que coleta novidades de IA e .NET e produz textos e ilustrações para o LinkedIn sobre o mesmo tema.
+**Características técnicas:**
+- .NET 10, console app em `examples/TrocaDeProvedorIA`.
+- Interface única `IChatClient`, do Microsoft.Extensions.AI, para todos os provedores.
+- SDKs oficiais da Anthropic (`Anthropic` 13.11.0) e da OpenAI (`OpenAI` 2.15.0), adaptados para `IChatClient` por `AsIChatClient`.
+- Registro dos provedores concentrado em `CriarCliente`, no `Program.cs`.
 
+**Características funcionais:**
+- Escolha do provedor pela variável `PROVEDOR`: `anthropic`, `openai` ou `teste` (padrão).
+- Resumo de um texto em até três frases pelo `ResumidorService`.
+- Cliente de teste que responde sem rede nem chave de API.
+
+**Ganhos:**
+- Trocar de provedor sem reescrever a lógica de negócio.
+- Testes rápidos e gratuitos, sem chamar a API real.
+- Menos acoplamento aos SDKs, o que facilita comparar modelos e custos.
+- Código mais fácil de manter quando um SDK muda.
 ## Conceitos utilizados
 
 **Princípios SOLID** (detalhados em [docs/SDD.md](docs/SDD.md)):
