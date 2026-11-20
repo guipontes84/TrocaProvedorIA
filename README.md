@@ -4,7 +4,7 @@ Exemplo em C# de como trocar de provedor de IA sem reescrever o código. O servi
 
 ![Trocar de provedor de IA sem reescrever o código](drafts/EXEMPLO_ia-x-csharp-trocar-provedor.svg?v=2)
 
-Este repositório também contém o gerador de rascunhos de posts sobre IA x C# que deu origem à ilustração (`LinkedinDicas.csproj`).
+O repositório também contém o gerador de rascunhos de posts (`LinkedinDicas.csproj`), que coleta novidades de IA e .NET e produz textos e ilustrações para o LinkedIn sobre o mesmo tema.
 
 ## Conceitos utilizados
 
