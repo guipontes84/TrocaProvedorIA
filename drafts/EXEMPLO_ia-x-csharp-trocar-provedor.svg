@@ -62,8 +62,11 @@
   <text x="1010" y="438" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">Cliente de teste</text>
 
   <text class="pisca" x="600" y="555" text-anchor="middle" font-size="22" font-weight="700" fill="#facc15">Troca de provedor concentrada em um lugar só: o registro do cliente</text>
-  <text x="1160" y="590" text-anchor="end" font-size="20" font-weight="700" fill="#ffffff">Guilherme Pontes</text>
+  <text x="1160" y="576" text-anchor="end" font-size="20" font-weight="700" fill="#ffffff">Guilherme Pontes</text>
   <a href="https://www.linkedin.com/in/guilhermepontesdev" target="_blank">
-    <text x="1160" y="614" text-anchor="end" font-size="16" fill="#67e8f9" text-decoration="underline">linkedin.com/in/guilhermepontesdev</text>
+    <text x="1160" y="598" text-anchor="end" font-size="15" fill="#67e8f9" text-decoration="underline">linkedin.com/in/guilhermepontesdev</text>
+  </a>
+  <a href="https://github.com/guipontes84/TrocaProvedorIA" target="_blank">
+    <text x="1160" y="618" text-anchor="end" font-size="15" fill="#67e8f9" text-decoration="underline">github.com/guipontes84/TrocaProvedorIA</text>
   </a>
 </svg>
