@@ -2,7 +2,7 @@
 
 Gera rascunhos de posts para o LinkedIn sobre **IA x C#** (Anthropic, OpenAI, LLMs, RAG, Skills, .NET/C#, Microsoft Agent Framework), três vezes por dia.
 
-![Trocar de provedor de IA sem reescrever o código](drafts/EXEMPLO_ia-x-csharp-trocar-provedor.svg)
+![Trocar de provedor de IA sem reescrever o código](drafts/EXEMPLO_ia-x-csharp-trocar-provedor.svg?v=2)
 
 Exemplo de ilustração gerada: a aplicação depende de `IChatClient`, e o provedor (Anthropic, OpenAI ou cliente de teste) fica atrás dessa interface.
 
