@@ -2,6 +2,28 @@
 
 Gera rascunhos de posts para o LinkedIn sobre **IA x C#** (Anthropic, OpenAI, LLMs, RAG, Skills, .NET/C#, Microsoft Agent Framework), três vezes por dia.
 
+![Trocar de provedor de IA sem reescrever o código](drafts/EXEMPLO_ia-x-csharp-trocar-provedor.svg)
+
+Exemplo de ilustração gerada: a aplicação depende de `IChatClient`, e o provedor (Anthropic, OpenAI ou cliente de teste) fica atrás dessa interface.
+
+## Conceitos utilizados
+
+**Princípios SOLID** (detalhados em [docs/SDD.md](docs/SDD.md)):
+- **S**, responsabilidade única: `ResumidorService` só resume; `CriarCliente` só monta o cliente.
+- **O**, aberto/fechado: parcial. Adicionar provedor exige editar o `switch` em `CriarCliente`.
+- **L**, substituição de Liskov: `ClienteFalso` substitui `IChatClient` sem o serviço notar.
+- **I**, segregação de interfaces: o serviço usa só `GetResponseAsync`.
+- **D**, inversão de dependência: o serviço depende da abstração `IChatClient`.
+
+**Padrões de projeto:**
+- **Adapter:** `AsIChatClient(...)` adapta os SDKs da Anthropic e da OpenAI para `IChatClient`.
+- **Strategy:** trocar o `IChatClient` troca o comportamento do serviço, sem mudar o serviço.
+- **Factory (simples):** `CriarCliente` escolhe o cliente a partir de `PROVEDOR`.
+- **Injeção de dependência:** o construtor recebe o cliente; `Program.cs` é o *composition root*.
+- **Fake:** `ClienteFalso` substitui o provedor real nos testes.
+
+**Ideia de DDD:** camada anticorrupção. `IChatClient` é a porta que o domínio conhece, e os SDKs dos provedores ficam atrás dela como adaptadores.
+
 Cada rascunho sai com:
 - `drafts/<data>_<titulo>.md`: texto do post em português, com gancho, lista, comparação ou exemplo em C#, e dica de uma das áreas (arquitetura, APIs/microsserviços, mensageria, cloud/DevOps, bancos, front-end).
 - `drafts/<data>_<titulo>.svg`: ilustração do ponto principal. Exporte para PNG antes de publicar no LinkedIn.
