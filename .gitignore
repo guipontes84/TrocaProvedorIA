@@ -1,0 +1,15 @@
+# Build
+bin/
+obj/
+**/bin/
+**/obj/
+
+# Estado local e rascunhos gerados
+state/
+drafts/*
+!drafts/EXEMPLO_*
+
+# Editores
+.vs/
+.vscode/
+.idea/

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "OpenAI",
+    "url": "https://openai.com/news/rss.xml",
+    "topics": ["OpenAI", "LLM"]
+  },
+  {
+    "name": ".NET Blog",
+    "url": "https://devblogs.microsoft.com/dotnet/feed/",
+    "topics": ["C#", ".NET"]
+  },
+  {
+    "name": "Microsoft Agent Framework",
+    "url": "https://devblogs.microsoft.com/agent-framework/feed/",
+    "topics": ["MAF", "Agentes"]
+  },
+  {
+    "name": "Anthropic",
+    "url": "https://www.anthropic.com/news/rss.xml",
+    "topics": ["Anthropic", "Claude", "Skills"]
+  }
+]

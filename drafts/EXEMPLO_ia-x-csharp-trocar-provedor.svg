@@ -1,0 +1,69 @@
+<svg viewBox="0 0 1200 627" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="fundo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="0.55" stop-color="#1e1b4b"/>
+      <stop offset="1" stop-color="#0e7490"/>
+    </linearGradient>
+    <linearGradient id="nucleo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="app" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22c55e"/>
+      <stop offset="1" stop-color="#16a34a"/>
+    </linearGradient>
+    <marker id="seta" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#facc15"/>
+    </marker>
+    <filter id="brilho" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .fluxo { stroke-dasharray: 14 10; animation: correr 1.2s linear infinite; }
+    @keyframes correr { to { stroke-dashoffset: -48; } }
+    .pulso { transform-origin: 600px 315px; animation: pulsar 2.4s ease-in-out infinite; }
+    @keyframes pulsar { 0%,100% { transform: scale(1); } 50% { transform: scale(1.04); } }
+    .pisca { animation: piscar 2s ease-in-out infinite; }
+    @keyframes piscar { 0%,100% { opacity: 1; } 50% { opacity: 0.55; } }
+  </style>
+
+  <rect width="1200" height="627" fill="url(#fundo)"/>
+  <circle cx="1100" cy="60" r="140" fill="#f472b6" opacity="0.15"/>
+  <circle cx="90" cy="580" r="120" fill="#facc15" opacity="0.12"/>
+
+  <text x="600" y="90" text-anchor="middle" font-size="44" font-weight="700" fill="#ffffff">Trocar de provedor de IA sem reescrever o código</text>
+  <text x="600" y="134" text-anchor="middle" font-size="24" fill="#67e8f9">Seu código depende de IChatClient, não do SDK do provedor</text>
+
+  <rect x="60" y="250" width="260" height="130" rx="18" fill="url(#app)"/>
+  <text x="190" y="303" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">Sua aplicação C#</text>
+  <text x="190" y="340" text-anchor="middle" font-size="18" fill="#dcfce7">ResumidorService</text>
+
+  <line class="fluxo" x1="330" y1="315" x2="446" y2="315" stroke="#facc15" stroke-width="4" marker-end="url(#seta)"/>
+
+  <g class="pulso" filter="url(#brilho)">
+    <rect x="460" y="250" width="280" height="130" rx="18" fill="url(#nucleo)"/>
+  </g>
+  <text x="600" y="303" text-anchor="middle" font-size="24" font-weight="700" fill="#ffffff">IChatClient</text>
+  <text x="600" y="340" text-anchor="middle" font-size="18" fill="#e0f2fe">Microsoft.Extensions.AI</text>
+
+  <line class="fluxo" x1="750" y1="290" x2="856" y2="200" stroke="#f472b6" stroke-width="3.5" marker-end="url(#seta)"/>
+  <line class="fluxo" x1="750" y1="315" x2="856" y2="315" stroke="#facc15" stroke-width="3.5" marker-end="url(#seta)"/>
+  <line class="fluxo" x1="750" y1="340" x2="856" y2="430" stroke="#67e8f9" stroke-width="3.5" marker-end="url(#seta)"/>
+
+  <rect x="870" y="170" width="280" height="60" rx="14" fill="#f472b6"/>
+  <text x="1010" y="208" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">Anthropic</text>
+  <rect x="870" y="285" width="280" height="60" rx="14" fill="#facc15"/>
+  <text x="1010" y="323" text-anchor="middle" font-size="22" font-weight="700" fill="#1e1b4b">OpenAI</text>
+  <rect x="870" y="400" width="280" height="60" rx="14" fill="#67e8f9"/>
+  <text x="1010" y="438" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">Cliente de teste</text>
+
+  <text class="pisca" x="600" y="555" text-anchor="middle" font-size="22" font-weight="700" fill="#facc15">Troca de provedor concentrada em um lugar só: o registro do cliente</text>
+  <text x="1160" y="590" text-anchor="end" font-size="20" font-weight="700" fill="#ffffff">Guilherme Pontes</text>
+  <a href="https://www.linkedin.com/in/guilhermepontesdev" target="_blank">
+    <text x="1160" y="614" text-anchor="end" font-size="16" fill="#67e8f9" text-decoration="underline">linkedin.com/in/guilhermepontesdev</text>
+  </a>
+</svg>
