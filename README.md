@@ -1,10 +1,10 @@
-# LinkedinDicas
+# TrocaProvedorIA
 
-Gera rascunhos de posts para o LinkedIn sobre **IA x C#** (Anthropic, OpenAI, LLMs, RAG, Skills, .NET/C#, Microsoft Agent Framework), três vezes por dia.
+Exemplo em C# de como trocar de provedor de IA sem reescrever o código. O serviço depende da interface IChatClient, do Microsoft.Extensions.AI, e não do SDK da Anthropic ou da OpenAI. A troca fica concentrada no registro do cliente, sem mudar a lógica do serviço. Inclui um cliente de teste que roda sem rede nem chave de API. Feito em .NET 10.
 
 ![Trocar de provedor de IA sem reescrever o código](drafts/EXEMPLO_ia-x-csharp-trocar-provedor.svg?v=2)
 
-Exemplo de ilustração gerada: a aplicação depende de `IChatClient`, e o provedor (Anthropic, OpenAI ou cliente de teste) fica atrás dessa interface.
+Este repositório também contém o gerador de rascunhos de posts sobre IA x C# que deu origem à ilustração (`LinkedinDicas.csproj`).
 
 ## Conceitos utilizados
 
